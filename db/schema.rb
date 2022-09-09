@@ -10,9 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_09_185827) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_09_205759) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "items", force: :cascade do |t|
+    t.string "item_id"
+    t.string "pedido_id"
+    t.string "produto_id"
+    t.string "produto_estoque_id"
+    t.string "sku"
+    t.string "nome_produto"
+    t.string "slug_produto"
+    t.string "origem_mercadoria"
+    t.string "tempo_producao"
+    t.string "ncm"
+    t.string "combinacoes"
+    t.string "perguntas"
+    t.string "quantidade"
+    t.string "unidade_medida_id"
+    t.string "valor_unitario"
+    t.string "valor_total"
+    t.string "altura"
+    t.string "largura"
+    t.string "comprimento"
+    t.string "peso"
+    t.string "valor_frete_unitario"
+    t.string "valor_frete_adicional"
+    t.string "objeto_codigo_rastreamento"
+    t.string "descricao"
+    t.string "image"
+    t.string "presente"
+    t.string "total_presente"
+    t.string "desconto"
+    t.string "desconto_percentual"
+    t.string "url_rastreamento_item"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "wspedidos", force: :cascade do |t|
     t.integer "numero"
