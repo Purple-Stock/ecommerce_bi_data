@@ -1,0 +1,2 @@
+class Wspedido < ApplicationRecord
+end

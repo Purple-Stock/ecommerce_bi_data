@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @wspedido %>
+
+<div>
+  <%= link_to "Edit this wspedido", edit_wspedido_path(@wspedido) %> |
+  <%= link_to "Back to wspedidos", wspedidos_path %>
+
+  <%= button_to "Destroy this wspedido", @wspedido, method: :delete %>
+</div>

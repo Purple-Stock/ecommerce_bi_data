@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Wspedidos</h1>
+
+<div id="wspedidos">
+  <% @wspedidos.each do |wspedido| %>
+    <%= render wspedido %>
+    <p>
+      <%= link_to "Show this wspedido", wspedido %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New wspedido", new_wspedido_path %>

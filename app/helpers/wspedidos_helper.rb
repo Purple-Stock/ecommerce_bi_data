@@ -1,0 +1,2 @@
+module WspedidosHelper
+end
