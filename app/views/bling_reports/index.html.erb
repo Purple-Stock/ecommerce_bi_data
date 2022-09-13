@@ -1,0 +1,23 @@
+<h1>Relatório estoque</h1>
+
+<div id="products">
+  <table id="order_table" class="table-striped table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Descrição</th>
+      <th>Estoque Atual</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product[:codigo] %></td>
+        <td><%= product[:descricao] %></td>
+        <td><%= product[:estoqueAtual] - 1000 %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

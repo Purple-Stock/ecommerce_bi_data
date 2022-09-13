@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   resources :items
   resources :wspedidos
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'bling_reports/index', to: 'bling_reports#index', as: 'index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root "bling_reports#index"
 end
