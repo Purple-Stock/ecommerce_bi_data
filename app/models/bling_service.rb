@@ -1,5 +1,5 @@
 class BlingService
-  @apikey = ''
+  @apikey = ENV['BLING']
 
   def self.get_products
     @products = []
