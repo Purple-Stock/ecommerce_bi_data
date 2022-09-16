@@ -10,7 +10,6 @@
 /test/version_tmp/
 /tmp/
 log/development.log
-config/database.yml
 
 # Used by dotenv library to load environment variables.
 # .env
@@ -59,4 +58,3 @@ build-iPhoneSimulator/
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
-config/blazer.yml
