@@ -1,5 +1,7 @@
 <div class="md:px-32 py-8 w-full">
   <div class="shadow overflow-hidden rounded border-b border-gray-200">
+    <div>QUANTIDADE NEGATIVA: <%= @products.map{ |e| e[:estoqueAtual]}.sum %>
+
     <table id="order_table" class="min-w-full bg-white">
       <thead class="bg-gray-800 text-white">
         <tr>
@@ -14,7 +16,7 @@
           <tr>
             <td class="w-1/3 text-left py-3 px-4"><%= product[:codigo] %></td>
             <td class="w-1/3 text-left py-3 px-4"><%= product[:descricao] %></td>
-            <td class="text-left py-3 px-4"><%= product[:estoqueAtual] - 1000 %></td>
+            <td class="text-left py-3 px-4"><%= product[:estoqueAtual] %></td>
           </tr>
         <% end %>
       </tbody>
