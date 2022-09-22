@@ -1,0 +1,119 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_pedido: MyString
+  status_pedido: MyString
+  cancelar_motivo: MyString
+  status_devolucao_reembolso: MyString
+  numero_rastreamento: MyString
+  opcao_envio: MyString
+  metodo_envio: MyString
+  data_prevista_envio: 2022-09-21 17:55:27
+  tempo_envio: 2022-09-21 17:55:27
+  data_criacao_pedido: 2022-09-21 17:55:27
+  hora_pagamento_pedido: 2022-09-21 17:55:27
+  numero_referência_sku_principal: MyString
+  nome_produto: MyString
+  numero_referencia_sku: MyString
+  nome_variacao: MyString
+  preco_original: 1.5
+  preco_acordado: 1.5
+  quantidade: 1
+  subtotal_produto: 1.5
+  desconto_vendedor: 1.5
+  desconto_vendedor_2: 1.5
+  reembolso_shopee: 1.5
+  peso_total_sku: 1.5
+  numero_produtos_pedidos: 1
+  peso_total_pedido: 1.5
+  codigo_cupom: MyString
+  cupom_vendedor: 1.5
+  seller_absorbed_coin_cashback: 1.5
+  cupom_shopee: MyString
+  indicador_leve_mais_menos: MyString
+  desconto_shopee_leve_mais_menos: 1.5
+  desconto_leve_mais_menos_vendedor: 1.5
+  compensar_moedas_shopee: 1
+  total_descontado_cartao_credito: 1.5
+  valor_total: 1.5
+  taxa_envio_pagas_pelo_comprador: 1.5
+  desconto_frete_aproximado: 1.5
+  taxa_envio_reversa: 1.5
+  taxa_transacao: 1.5
+  taxa_comissao: 1.5
+  taxa_servico: 1.5
+  total_global: 1.5
+  valor_estimado_frete: 1.5
+  nome_usuário_comprador: MyString
+  nome_destinatario: MyString
+  telefone: MyString
+  cpf_comprador: MyString
+  endereco_entrega: MyString
+  cidade_1: MyString
+  bairro: MyString
+  cidade: MyString
+  uf: MyString
+  pais: MyString
+  cep: MyString
+  observacao_comprador: MyString
+  hora_completa_pedido: 2022-09-21 17:55:27
+  nota: MyString
+
+two:
+  id_pedido: MyString
+  status_pedido: MyString
+  cancelar_motivo: MyString
+  status_devolucao_reembolso: MyString
+  numero_rastreamento: MyString
+  opcao_envio: MyString
+  metodo_envio: MyString
+  data_prevista_envio: 2022-09-21 17:55:27
+  tempo_envio: 2022-09-21 17:55:27
+  data_criacao_pedido: 2022-09-21 17:55:27
+  hora_pagamento_pedido: 2022-09-21 17:55:27
+  numero_referência_sku_principal: MyString
+  nome_produto: MyString
+  numero_referencia_sku: MyString
+  nome_variacao: MyString
+  preco_original: 1.5
+  preco_acordado: 1.5
+  quantidade: 1
+  subtotal_produto: 1.5
+  desconto_vendedor: 1.5
+  desconto_vendedor_2: 1.5
+  reembolso_shopee: 1.5
+  peso_total_sku: 1.5
+  numero_produtos_pedidos: 1
+  peso_total_pedido: 1.5
+  codigo_cupom: MyString
+  cupom_vendedor: 1.5
+  seller_absorbed_coin_cashback: 1.5
+  cupom_shopee: MyString
+  indicador_leve_mais_menos: MyString
+  desconto_shopee_leve_mais_menos: 1.5
+  desconto_leve_mais_menos_vendedor: 1.5
+  compensar_moedas_shopee: 1
+  total_descontado_cartao_credito: 1.5
+  valor_total: 1.5
+  taxa_envio_pagas_pelo_comprador: 1.5
+  desconto_frete_aproximado: 1.5
+  taxa_envio_reversa: 1.5
+  taxa_transacao: 1.5
+  taxa_comissao: 1.5
+  taxa_servico: 1.5
+  total_global: 1.5
+  valor_estimado_frete: 1.5
+  nome_usuário_comprador: MyString
+  nome_destinatario: MyString
+  telefone: MyString
+  cpf_comprador: MyString
+  endereco_entrega: MyString
+  cidade_1: MyString
+  bairro: MyString
+  cidade: MyString
+  uf: MyString
+  pais: MyString
+  cep: MyString
+  observacao_comprador: MyString
+  hora_completa_pedido: 2022-09-21 17:55:27
+  nota: MyString
