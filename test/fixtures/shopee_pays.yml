@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2022-09-22 14:02:17
+  beneficiario: MyString
+  pagamento: 1.5
+  descricao: MyString
+  status: MyString
+  saldo_carteira: MyString
+  account: 1
+
+two:
+  data: 2022-09-22 14:02:17
+  beneficiario: MyString
+  pagamento: 1.5
+  descricao: MyString
+  status: MyString
+  saldo_carteira: MyString
+  account: 1

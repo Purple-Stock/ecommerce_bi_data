@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shopee_pays
   resources :items
   resources :wspedidos
   get 'bling_reports/index', to: 'bling_reports#index', as: 'index'
