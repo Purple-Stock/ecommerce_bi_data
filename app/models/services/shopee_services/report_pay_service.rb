@@ -4,6 +4,7 @@ module Services
       def self.save_csv(file_path, account)
         csv_text = File.read(Rails.root.join('lib', 'csvs', file_path))
         csv = CSV.parse(csv_text, headers: true, encoding: 'UTF-8')
+        puts "csv possui: #{csv.size} linhas"
         shopee_pays = []
         csv.each do |row|
           shopee_pay = ShopeePay.new
