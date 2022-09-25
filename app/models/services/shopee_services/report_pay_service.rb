@@ -9,7 +9,7 @@ module Services
         csv.each do |row|
           shopee_pay = ShopeePay.new
           shopee_pay.hash_id = Digest::MD5.hexdigest "#{row['Data']}-#{row['Beneficiário']}-#{row['Pagamento']}-#{row['Descrição']}-account"
-          shopee_pay.data = row['Data']
+          shopee_pay.data = row['Data'] 
           shopee_pay.beneficiario = row['Beneficiário']
           shopee_pay.pagamento = row['Pagamento']
           shopee_pay.descricao = row['Descrição']
@@ -19,7 +19,9 @@ module Services
 
           shopee_pays << shopee_pay
         end
-        ShopeePay.import(shopee_pays)
+        ShopeePay.import shopee_pays, on_duplicate_key_update: {
+          conflict_target: [:hash_id], columns: [:status]
+        }
       end
     end
   end
