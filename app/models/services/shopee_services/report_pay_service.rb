@@ -8,6 +8,7 @@ module Services
         shopee_pays = []
         csv.each do |row|
           shopee_pay = ShopeePay.new
+          shopee_pay.hash_id = Digest::MD5.hexdigest "#{row['Data']}-#{row['Beneficiário']}-#{row['Pagamento']}-#{row['Descrição']}-account"
           shopee_pay.data = row['Data']
           shopee_pay.beneficiario = row['Beneficiário']
           shopee_pay.pagamento = row['Pagamento']
