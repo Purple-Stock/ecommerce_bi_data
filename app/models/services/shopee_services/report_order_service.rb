@@ -4,9 +4,11 @@ module Services
       def self.save_csv(file_path, account)
         csv_text = File.read(Rails.root.join('lib', 'csvs', file_path))
         csv = CSV.parse(csv_text, headers: true, encoding: 'UTF-8')
+        puts "csv possui: #{csv.size} linhas"
         shopee_orders = []
         csv.each do |row|
           shopee_order = ShopeeOrder.new
+          shopee_order.hash_id = Digest::MD5.hexdigest "#{row['ID do pedido']}-#{row['Número de referência SKU']}-#{account}"
           shopee_order.id_pedido = row['ID do pedido']
           shopee_order.status_pedido = row['Status do pedido']
           shopee_order.cancelar_motivo = row['Cancelar Motivo']
@@ -74,7 +76,9 @@ module Services
 
           shopee_orders << shopee_order
         end
-        ShopeeOrder.import(shopee_orders)
+        ShopeeOrder.import shopee_orders, on_duplicate_key_update: {
+          conflict_target: [:hash_id], columns: [:status_pedido]
+        }
       end
     end
   end
