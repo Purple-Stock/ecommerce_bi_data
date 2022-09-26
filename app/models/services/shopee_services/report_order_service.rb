@@ -8,7 +8,7 @@ module Services
         shopee_orders = []
         csv.each do |row|
           shopee_order = ShopeeOrder.new
-          shopee_order.hash_id = Digest::MD5.hexdigest "#{row['ID do pedido']}-#{row['Número de referência SKU']}-#{account}"
+          shopee_order.hash_id = Digest::MD5.hexdigest "#{row['ID do pedido']}-#{row['Nome do Produto']}-#{row['Número de referência SKU']}-#{account}"
           shopee_order.id_pedido = row['ID do pedido']
           shopee_order.status_pedido = row['Status do pedido']
           shopee_order.cancelar_motivo = row['Cancelar Motivo']
@@ -61,9 +61,8 @@ module Services
           shopee_order.telefone = row['Telefone']
           shopee_order.cpf_comprador = row['CPF do Comprador']
           shopee_order.endereco_entrega = row['Endereço de entrega']
-          shopee_order.cidade = row['Cidade']
+          shopee_order.cidade = row[50]
           shopee_order.bairro = row['Bairro']
-          shopee_order.cidade = row['Cidade']
           shopee_order.uf = row['UF']
           shopee_order.pais = row['País']
           shopee_order.cep = row['CEP']
