@@ -40,7 +40,7 @@ class BlingService
       @all_products = HTTParty.get("https://bling.com.br/Api/v2/produtos/page=#{count}/json/?apikey=#{@apikey}&estoque=S",
                                    headers: { content: 'application/json' })
       @all_products['retorno']['produtos'].each do |product|
-        if product['produto']['estrutura'].nil?
+        if product['produto']['estrutura'].nil? && product['produto']['variacoes'].nil?
           @products << { "codigo": product['produto']['codigo'], "descricao": product['produto']['descricao'],
                          "estoqueAtual": product['produto']['depositos'][0]['deposito']['saldo']}
         end
