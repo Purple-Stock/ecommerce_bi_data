@@ -1,0 +1,157 @@
+<%= form_with(model: shopee_income_finished, class: "contents") do |form| %>
+  <% if shopee_income_finished.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(shopee_income_finished.errors.count, "error") %> prohibited this shopee_income_finished from being saved:</h2>
+
+      <ul>
+        <% shopee_income_finished.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :id_pedido %>
+    <%= form.text_field :id_pedido, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :id_reembolso %>
+    <%= form.text_field :id_reembolso, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :nome_usuario_comprador %>
+    <%= form.text_field :nome_usuario_comprador, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :data_criacao_pedido %>
+    <%= form.datetime_field :data_criacao_pedido, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :metodo_pagamento_comprador %>
+    <%= form.text_field :metodo_pagamento_comprador, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :data_conclusao_pagamento %>
+    <%= form.datetime_field :data_conclusao_pagamento, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :preco_original_produto %>
+    <%= form.text_field :preco_original_produto, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :promocao_seu_produto %>
+    <%= form.text_field :promocao_seu_produto, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :valor_reembolso_comprador %>
+    <%= form.text_field :valor_reembolso_comprador, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :desconto_produto_pela_shopee %>
+    <%= form.text_field :desconto_produto_pela_shopee, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :cupom %>
+    <%= form.text_field :cupom, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :cashback_moeda_absorvida_vendedor %>
+    <%= form.text_field :cashback_moeda_absorvida_vendedor, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :taxa_frete_paga_pelo_comprador %>
+    <%= form.text_field :taxa_frete_paga_pelo_comprador, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :desconto_frete_pela_shopee %>
+    <%= form.text_field :desconto_frete_pela_shopee, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :taxa_frete_real_paga_pela_Shopee %>
+    <%= form.text_field :taxa_frete_real_paga_pela_Shopee, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :reverse_shipping_Fee %>
+    <%= form.text_field :reverse_shipping_Fee, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :taxa_comissao %>
+    <%= form.text_field :taxa_comissao, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :taxa_servico %>
+    <%= form.text_field :taxa_servico, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :taxa_transacao %>
+    <%= form.text_field :taxa_transacao, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :quantia_total_lancada %>
+    <%= form.text_field :quantia_total_lancada, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :codigo_cupom %>
+    <%= form.text_field :codigo_cupom, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :compensacao_perdida %>
+    <%= form.text_field :compensacao_perdida, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :peso_total_real_por_pedido %>
+    <%= form.text_field :peso_total_real_por_pedido, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :promocao_taxa_frete_pelo_vendedor %>
+    <%= form.text_field :promocao_taxa_frete_pelo_vendedor, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :shipping_provider %>
+    <%= form.text_field :shipping_provider, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :nome_transportadora %>
+    <%= form.text_field :nome_transportadora, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :account %>
+    <%= form.number_field :account, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :hash_id %>
+    <%= form.text_field :hash_id, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shopee_income_finisheds
   resources :shopee_pays
   resources :items
   resources :wspedidos

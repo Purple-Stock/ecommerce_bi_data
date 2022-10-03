@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_25_231017) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_30_183108) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -103,6 +103,40 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_25_231017) do
     t.string "url_rastreamento_item"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "shopee_income_finisheds", force: :cascade do |t|
+    t.string "id_pedido"
+    t.string "id_reembolso"
+    t.string "nome_usuario_comprador"
+    t.datetime "data_criacao_pedido"
+    t.string "metodo_pagamento_comprador"
+    t.datetime "data_conclusao_pagamento"
+    t.float "preco_original_produto"
+    t.float "promocao_seu_produto"
+    t.float "valor_reembolso_comprador"
+    t.float "desconto_produto_pela_shopee"
+    t.float "cupom"
+    t.float "cashback_moeda_absorvida_vendedor"
+    t.float "taxa_frete_paga_pelo_comprador"
+    t.float "desconto_frete_pela_shopee"
+    t.float "taxa_frete_real_paga_pela_Shopee"
+    t.float "reverse_shipping_Fee"
+    t.float "taxa_comissao"
+    t.float "taxa_servico"
+    t.float "taxa_transacao"
+    t.float "quantia_total_lancada"
+    t.string "codigo_cupom"
+    t.float "compensacao_perdida"
+    t.float "peso_total_real_por_pedido"
+    t.float "promocao_taxa_frete_pelo_vendedor"
+    t.string "shipping_provider"
+    t.string "nome_transportadora"
+    t.integer "account"
+    t.string "hash_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hash_id"], name: "index_shopee_income_finisheds_on_hash_id", unique: true
   end
 
   create_table "shopee_orders", force: :cascade do |t|

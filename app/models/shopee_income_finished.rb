@@ -1,0 +1,2 @@
+class ShopeeIncomeFinished < ApplicationRecord
+end

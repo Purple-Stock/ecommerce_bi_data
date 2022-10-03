@@ -1,0 +1,147 @@
+<div id="<%= dom_id shopee_income_finished %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Id pedido:</strong>
+    <%= shopee_income_finished.id_pedido %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Id reembolso:</strong>
+    <%= shopee_income_finished.id_reembolso %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nome usuario comprador:</strong>
+    <%= shopee_income_finished.nome_usuario_comprador %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Data criacao pedido:</strong>
+    <%= shopee_income_finished.data_criacao_pedido %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Metodo pagamento comprador:</strong>
+    <%= shopee_income_finished.metodo_pagamento_comprador %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Data conclusao pagamento:</strong>
+    <%= shopee_income_finished.data_conclusao_pagamento %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Preco original produto:</strong>
+    <%= shopee_income_finished.preco_original_produto %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Promocao seu produto:</strong>
+    <%= shopee_income_finished.promocao_seu_produto %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Valor reembolso comprador:</strong>
+    <%= shopee_income_finished.valor_reembolso_comprador %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Desconto produto pela shopee:</strong>
+    <%= shopee_income_finished.desconto_produto_pela_shopee %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cupom:</strong>
+    <%= shopee_income_finished.cupom %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Cashback moeda absorvida vendedor:</strong>
+    <%= shopee_income_finished.cashback_moeda_absorvida_vendedor %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Taxa frete paga pelo comprador:</strong>
+    <%= shopee_income_finished.taxa_frete_paga_pelo_comprador %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Desconto frete pela shopee:</strong>
+    <%= shopee_income_finished.desconto_frete_pela_shopee %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Taxa frete real paga pela shopee:</strong>
+    <%= shopee_income_finished.taxa_frete_real_paga_pela_Shopee %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Reverse shipping fee:</strong>
+    <%= shopee_income_finished.reverse_shipping_Fee %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Taxa comissao:</strong>
+    <%= shopee_income_finished.taxa_comissao %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Taxa servico:</strong>
+    <%= shopee_income_finished.taxa_servico %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Taxa transacao:</strong>
+    <%= shopee_income_finished.taxa_transacao %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Quantia total lancada:</strong>
+    <%= shopee_income_finished.quantia_total_lancada %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Codigo cupom:</strong>
+    <%= shopee_income_finished.codigo_cupom %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Compensacao perdida:</strong>
+    <%= shopee_income_finished.compensacao_perdida %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Peso total real por pedido:</strong>
+    <%= shopee_income_finished.peso_total_real_por_pedido %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Promocao taxa frete pelo vendedor:</strong>
+    <%= shopee_income_finished.promocao_taxa_frete_pelo_vendedor %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Shipping provider:</strong>
+    <%= shopee_income_finished.shipping_provider %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nome transportadora:</strong>
+    <%= shopee_income_finished.nome_transportadora %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Account:</strong>
+    <%= shopee_income_finished.account %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Hash:</strong>
+    <%= shopee_income_finished.hash_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this shopee income finished", shopee_income_finished, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this shopee income finished', edit_shopee_income_finished_path(shopee_income_finished), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
