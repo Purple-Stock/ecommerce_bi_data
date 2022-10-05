@@ -1,3 +1,38 @@
+<ul class="flex">
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(1) %>">Seu pedido foi criado! Aguardamos o pagamento</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(24) %>">Aguardando Pagamento</a>
+  </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(2) %>">Pago</a>
+  </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(35) %>">Pedidos impressos São Paulo</a>
+    </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(40) %>">PEDIDO FABRICAÇÃO</a>
+    </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(23) %>">Enviado</a>
+    </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(3) %>">Entregue</a>
+    </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(29) %>">Solicitação de troca ou devolução</a>
+    </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(38) %>">Produto Devolvido À Loja</a>
+    </li>
+  <li class="mr-6">
+  <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(37) %>">Pedido bate-volta</a>
+    </li>
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="<%= filter_index_path(4) %>">Cancelado</a>
+  </li>
+</ul>
 <table id="order_table" class="table-striped table-bordered table-responsive">
   <thead>
     <tr>
@@ -7,7 +42,6 @@
       <th>Status pedido</th>
       <th>Telefone</th>
       <th>Email</th>
-      <th>CEP</th>
       <th>Mensagem WhatsApp PC</th>
       <th>Mensagem WhatsApp Celular</th>
     </tr>
@@ -18,10 +52,9 @@
         <td><%= order.numero %></td>
         <td><%= order.cliente_razaosocial %></td>
         <td><%= order.data_pedido.strftime("%-d/%-m/%Y %H:%M") %></td>
-        <td>1<%#= @status_code.key(order.order_status)%></td>
+        <td><%= @status_codes.key(order.pedidostatus_id)%></td>
         <td><%= order.cliente_telefone %></td>
         <td><%= order.cliente_email %></td>
-        <td><%= order.cliente_cep %></td>
         <td><a href="https://web.whatsapp.com/send?phone=55<%= order.cliente_telefone.delete'() ' %>&amp;text=Olá <%= order.cliente_razaosocial.split(" ").first %>, sou a Nicoly da Purchase e recebemos o teu pedido <%= order.numero %>, gostaria de saber se deu tudo certo com a criação do seu pedido e se ficou alguma dúvida para prosseguir? Foi liberado um prazo para efetuar o pagamento deste pedido até sexta-feira(07/10/22). Não perca nossa promo!🥰😍😘😘😘" target="_blank">Clique Aqui para mandar uma mensagem pelo WhatsApp</a></td>
         <td><a href="https://api.whatsapp.com/send?phone=55<%= order.cliente_telefone.delete'() ' %>&amp;text=Olá <%= order.cliente_razaosocial.split(" ").first %>, sou a Nicoly da Purchase e recebemos o teu pedido <%= order.numero %>, gostaria de saber se deu tudo certo com a criação do seu pedido e se ficou alguma dúvida para prosseguir? Foi liberado um prazo para efetuar o pagamento deste pedido até sexta-feira(07/10/22). Não perca nossa promo!🥰😍😘😘😘" target="_blank">Clique Aqui para mandar uma mensagem pelo WhatsApp</a></td>        
       </tr>
