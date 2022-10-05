@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'bling_reports/stock_error', to: 'bling_reports#stock_error', as: 'stock_error'
   get 'bling_reports/all_stock', to: 'bling_reports#all_stock', as: 'all_stock'
 
-  root "bling_reports#index"
+  get 'messages/filter_index/:order_status', to: 'messages#filter_index', as: 'filter_index'
 
+  root "bling_reports#index"
+  
   mount Blazer::Engine, at: "blazer"
 end

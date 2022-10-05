@@ -1,5 +1,5 @@
 class WspedidosController < ApplicationController
-  before_action :set_wspedido, only: %i[ show edit update destroy ]
+  before_action :set_wspedido, only: %i[show edit update destroy]
 
   # GET /wspedidos or /wspedidos.json
   def index
@@ -7,8 +7,7 @@ class WspedidosController < ApplicationController
   end
 
   # GET /wspedidos/1 or /wspedidos/1.json
-  def show
-  end
+  def show; end
 
   # GET /wspedidos/new
   def new
@@ -16,8 +15,7 @@ class WspedidosController < ApplicationController
   end
 
   # GET /wspedidos/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /wspedidos or /wspedidos.json
   def create
@@ -25,7 +23,7 @@ class WspedidosController < ApplicationController
 
     respond_to do |format|
       if @wspedido.save
-        format.html { redirect_to wspedido_url(@wspedido), notice: "Wspedido was successfully created." }
+        format.html { redirect_to wspedido_url(@wspedido), notice: 'Wspedido was successfully created.' }
         format.json { render :show, status: :created, location: @wspedido }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class WspedidosController < ApplicationController
   def update
     respond_to do |format|
       if @wspedido.update(wspedido_params)
-        format.html { redirect_to wspedido_url(@wspedido), notice: "Wspedido was successfully updated." }
+        format.html { redirect_to wspedido_url(@wspedido), notice: 'Wspedido was successfully updated.' }
         format.json { render :show, status: :ok, location: @wspedido }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class WspedidosController < ApplicationController
     @wspedido.destroy
 
     respond_to do |format|
-      format.html { redirect_to wspedidos_url, notice: "Wspedido was successfully destroyed." }
+      format.html { redirect_to wspedidos_url, notice: 'Wspedido was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_wspedido
-      @wspedido = Wspedido.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def wspedido_params
-      params.fetch(:wspedido, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_wspedido
+    @wspedido = Wspedido.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def wspedido_params
+    params.fetch(:wspedido, {})
+  end
 end
