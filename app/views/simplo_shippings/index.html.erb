@@ -1,0 +1,8 @@
+<%= form_with url: receive_orders_id_path, method: :post do |form| %>
+  <%= form.text_field :orders_id %>
+  <%= form.submit "Calcular" %>
+<% end %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
