@@ -1,7 +1,7 @@
 <div id="<%= dom_id simplo_message %>">
   <p class="my-5">
     <strong class="block font-medium mb-1">Status code:</strong>
-    <%= simplo_message.status_code %>
+    <%= Services::SimploServices::WspedidoService.status_codes.key(simplo_message.status_code) %>
   </p>
 
   <p class="my-5">
