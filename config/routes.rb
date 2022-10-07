@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get 'messages/filter_index/:order_status', to: 'messages#filter_index', as: 'filter_index'
 
+  get 'simplo_shippings/index', to: 'simplo_shippings#index', as: 'simplo_shippings_index'
+  post 'simplo_shippings/receive_orders_id', to: 'simplo_shippings#receive_orders_id', as: 'receive_orders_id'
+
   root "bling_reports#index"
   
   mount Blazer::Engine, at: "blazer"

@@ -16,8 +16,13 @@ module Services
           'Solicitação de troca ou devolução' => '29',
           'Produto Devolvido À Loja' => '38',
           'Pedido bate-volta' => '37',
-          'Cancelado' => '4'
-         }
+          'Cancelado' => '4' }
+      end
+
+      def self.calculate_shipping_orders(orders_id)
+        orders_array = orders_id.split(',').map { |splitted| splitted.gsub(' ', '') }
+        @orders = Wspedido.where(numero: orders_array)
+        @orders.filter_map { |e| e[:total_frete].to_f }.sum
       end
     end
   end
