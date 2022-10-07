@@ -1,0 +1,2 @@
+module SimploMessagesHelper
+end

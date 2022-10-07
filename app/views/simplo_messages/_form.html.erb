@@ -1,0 +1,40 @@
+<%= form_with(model: simplo_message, class: "contents") do |form| %>
+  <% if simplo_message.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(simplo_message.errors.count, "error") %> prohibited this simplo_message from being saved:</h2>
+
+      <ul>
+        <% simplo_message.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :status_code %>
+    <%#= select_tag :status_code, options_from_collection_for_select(Services::SimploServices::WspedidoService.status_codes.key(order.pedidostatus_id), "status_code", "name") %>
+    <select name="status_code" disabled>
+      <option value="1">Seu pedido foi criado! Aguardamos o pagamento</option>
+      <option value="24">Aguardando Pagamento</option>
+      <option value="2">Pago</option>
+      <option value="35">Pedidos impressos São Paulo</option>
+      <option value="40">PEDIDO FABRICAÇÃO</option>
+      <option value="23">Enviado</option>
+      <option value="3">Entregue</option>
+      <option value="29">Solicitação de troca ou devolução</option>
+      <option value="38">Produto Devolvido À Loja</option>
+      <option value="37">Pedido bate-volta</option>
+      <option value="4">Cancelado</option>
+    </select>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

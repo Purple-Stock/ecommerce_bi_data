@@ -55,8 +55,8 @@
         <td><%= @status_codes.key(order.pedidostatus_id)%></td>
         <td><%= order.cliente_telefone %></td>
         <td><%= order.cliente_email %></td>
-        <td><a href="https://web.whatsapp.com/send?phone=55<%= order.cliente_telefone.delete'() ' %>&amp;text=Olá <%= order.cliente_razaosocial.split(" ").first %>, sou a Nicoly da Purchase e recebemos o teu pedido <%= order.numero %>, gostaria de saber se deu tudo certo com a criação do seu pedido e se ficou alguma dúvida para prosseguir? Foi liberado um prazo para efetuar o pagamento deste pedido até sexta-feira(07/10/22). Não perca nossa promo!🥰😍😘😘😘" target="_blank">Clique Aqui para mandar uma mensagem pelo WhatsApp</a></td>
-        <td><a href="https://api.whatsapp.com/send?phone=55<%= order.cliente_telefone.delete'() ' %>&amp;text=Olá <%= order.cliente_razaosocial.split(" ").first %>, sou a Nicoly da Purchase e recebemos o teu pedido <%= order.numero %>, gostaria de saber se deu tudo certo com a criação do seu pedido e se ficou alguma dúvida para prosseguir? Foi liberado um prazo para efetuar o pagamento deste pedido até sexta-feira(07/10/22). Não perca nossa promo!🥰😍😘😘😘" target="_blank">Clique Aqui para mandar uma mensagem pelo WhatsApp</a></td>        
+        <td><a href="https://web.whatsapp.com/send?phone=55<%= order.cliente_telefone.delete'() ' %>&amp;text=Olá <%= order.cliente_razaosocial.split(" ").first %>, sou a Nicoly da Purchase e recebemos o teu pedido <%= order.numero %>, <%= SimploMessage.find_by(status_code: order.pedidostatus_id).message rescue nil %> " target="_blank">Clique Aqui para mandar uma mensagem pelo WhatsApp</a></td>
+        <td><a href="https://api.whatsapp.com/send?phone=55<%= order.cliente_telefone.delete'() ' %>&amp;text=Olá <%= order.cliente_razaosocial.split(" ").first %>, sou a Nicoly da Purchase e recebemos o teu pedido <%= order.numero %>, <%= SimploMessage.find_by(status_code: order.pedidostatus_id).message rescue nil %> " target="_blank">Clique Aqui para mandar uma mensagem pelo WhatsApp</a></td>        
       </tr>
     <% end %>
   </tbody>
