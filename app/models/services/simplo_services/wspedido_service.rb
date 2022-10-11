@@ -16,7 +16,10 @@ module Services
           'Solicitação de troca ou devolução' => '29',
           'Produto Devolvido À Loja' => '38',
           'Pedido bate-volta' => '37',
-          'Cancelado' => '4' }
+          'Cancelado' => '4',
+          'Fabricação 2' => '44',
+          'Fabricação 3' => '45'
+        }
       end
 
       def self.calculate_shipping_orders(orders_id)
