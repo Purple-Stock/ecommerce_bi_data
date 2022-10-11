@@ -75,3 +75,5 @@ end
 gem 'tailwindcss-rails', '~> 2.0'
 
 gem "typhoeus", "~> 1.4"
+
+gem "figaro"
