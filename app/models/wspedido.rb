@@ -152,7 +152,7 @@ class Wspedido < ApplicationRecord
   end
 
   def self.update_last_status
-    (1..4).each do |i|
+    (1..10).each do |i|
       @order_page = HTTParty.get("#{@host}/ws/wspedidos.json?page=#{i}",
                                  headers: { content: 'application/json',
                                             Appkey: @app_key.to_s })
