@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'bling_reports/all_stock', to: 'bling_reports#all_stock', as: 'all_stock'
 
   get 'messages/filter_index/:order_status', to: 'messages#filter_index', as: 'filter_index'
+  post 'messages/update_status_code', to: 'messages#update_status_code', as: 'update_status_code'
 
   get 'simplo_shippings/index', to: 'simplo_shippings#index', as: 'simplo_shippings_index'
   post 'simplo_shippings/receive_orders_id', to: 'simplo_shippings#receive_orders_id', as: 'receive_orders_id'
