@@ -23,8 +23,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV["PURCHASE_DATABASE_DEV_URL"] %>
-
+  url: purchase_data_development
 
 
   #database: purchase_data_development
